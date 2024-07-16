@@ -50,7 +50,7 @@ const ContactMeSection: React.FC = () => {
           </div>
           <input
             type="text"
-            placeholder="Saveli Elizarov"
+            placeholder="Keltizarov"
             value={name}
             onChange={(e) => setName(e.target.value)}
             className="input h-10 w-1/2 input-bordered text-sm "
@@ -64,7 +64,7 @@ const ContactMeSection: React.FC = () => {
           </div>
           <input
             type="email"
-            placeholder="elizarov@gmail.com"
+            placeholder="akviduk@gmail.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="input h-10 w-1/2 input-bordered text-sm "
@@ -79,6 +79,9 @@ const ContactMeSection: React.FC = () => {
           <textarea
             className="textarea textarea-bordered h-48 w-1/2"
             placeholder="Type your message here."
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            required
           ></textarea>
         </label>
 
