@@ -68,7 +68,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
         <div className="absolute left-0 top-0 bottom-0 w-1 bg-gray-300">
           <div
             className="bg-blue-500 w-full transition-all duration-300 ease-out"
-            style={{ height: `${progress * 100}%` }}
+            style={{ height: `${progress * 120}%` }}
           ></div>
         </div>
         <div ref={experiencesRef} className="pl-8">

@@ -1,6 +1,7 @@
 "use client";
 
-import { TbLetterD } from "react-icons/tb";
+import { FaLinkedin } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
 const Header: React.FC = () => {
   const handleScroll = (
@@ -24,8 +25,8 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-10 rounded-3xl border flex flex-row items-center justify-center py-6 text-black bg-white mx-64 mt-4 font-semibold">
-      <nav>
+    <header className="fixed top-0 left-0 right-0 z-10 rounded-3xl border flex items-center justify-between py-6 text-black bg-white mx-64 mt-4 font-semibold">
+      <nav className="flex flex-1 justify-between items-center mx-16">
         <ul className="flex flex-row gap-8 items-center">
           <li>
             <a href="#start" onClick={(e) => handleScroll(e, "start")}>
@@ -56,6 +57,26 @@ const Header: React.FC = () => {
           <li>
             <a href="#contactme" onClick={(e) => handleScroll(e, "contactme")}>
               Contact me
+            </a>
+          </li>
+        </ul>
+        <ul className="flex flex-row gap-6 items-center">
+          <li>
+            <a
+              href="https://github.com/diasmashikov"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub className="text-3xl" />
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/dias-mashikov/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaLinkedin className="text-3xl text-blue-500" />
             </a>
           </li>
         </ul>
