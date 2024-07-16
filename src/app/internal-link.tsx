@@ -10,7 +10,7 @@ const InternalLink: React.FC<InternalLinkProps> = ({ href, websiteName }) => {
   return (
     <Link
       href={href}
-      className="rounded-xl text-gray-500 bg-base-200  px-4 font-semibold flex flex-row items-center gap-2 text-sm"
+      className="rounded-xl text-secondary-text-color bg-primary-background-color  px-4 font-semibold flex flex-row items-center gap-2 text-sm"
     >
       <FaExternalLinkAlt /> {websiteName}
     </Link>

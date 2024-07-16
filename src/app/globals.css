@@ -2,17 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    /* Your light theme */
+    --primary-background-color: 255 255 255;
+    --secondary-background-color: 255 255 255;
+    --header-border-color: 226 232 240;
+    --header-text-color: 0 0 0;
+
+    --primary-text-color: 0 0 0;
+    --secondary-text-color: 55 65 81;
+
+    --primary-button-color: 31 41 55;
+    --primary-button-text-color: 255 255 255;
+
+    --secondary-button-color: 226 232 240;
+    --secondary-button-text-color: 0 0 0;
+  }
+
+  .dark {
+    /* Your dark theme */
+    --primary-background-color: 34 40 49;
+    --secondary-background-color: 49 54 63;
+    --header-border-color: 49 54 63;
+    --header-text-color: 255 255 255;
+
+    --primary-text-color: 255 255 255;
+    --secondary-text-color: 229 231 235;
+
+    --primary-button-color: 249 250 251;
+    --primary-button-text-color: 0 0 0;
+
+    --secondary-button-color: 0 0 0;
+    --secondary-button-text-color: 255 255 255;
+
+    --foreground: white;
   }
 }
 

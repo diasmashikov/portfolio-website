@@ -17,7 +17,7 @@ const ProjectComponent: React.FC<ProjectDetails> = ({
   activeUsers,
 }) => {
   return (
-    <div className="card bg-base-100 shadow-xl p-8 flex flex-row gap-1 mb-8">
+    <div className="card bg-secondary-background-color shadow-xl p-8 flex flex-row gap-1 mb-8">
       <div className="w-1/2 flex flex-col ">
         <div className="flex flex-row justify-between pb-4">
           <CardTitle name={projectName} />
@@ -25,7 +25,9 @@ const ProjectComponent: React.FC<ProjectDetails> = ({
         </div>
 
         <div>
-          <p className="text-gray-800 pb-6 leading-8">{projectDescription}</p>
+          <p className="text-primary-text-color font-medium pb-6 leading-8">
+            {projectDescription}
+          </p>
         </div>
         <div className="flex flex-row justify-between">
           <div className="flex flex-row flex-wrap gap-2">

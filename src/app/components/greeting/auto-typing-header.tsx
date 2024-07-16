@@ -26,7 +26,9 @@ const AutoTypingHeader: React.FC = () => {
       <h1 className="text-4xl font-bold">
         {showInitialCursor && <span className="typed-cursor">|</span>}
         <ReactTyped
-          strings={["Full-Stack <span class='text-blue-500'>Developer</span>"]}
+          strings={[
+            "<span class='text-primary-text-color'>Full-Stack</span> <span class='text-blue-500'>Developer</span>",
+          ]}
           typeSpeed={60}
           onBegin={() => setShowInitialCursor(false)}
         />

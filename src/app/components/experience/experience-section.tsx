@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { experiences } from "@/content";
 import ExperienceComponent from "./experience-component";
+import SectionTitle from "../section-title";
 
 type ExperienceSectionProps = {
   classNameDimensions: string;
@@ -63,7 +64,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
       ref={sectionRef}
       className={`flex flex-col relative ${classNameDimensions}`}
     >
-      <h2 className="text-6xl font-bold mb-8">Experience</h2>
+      <SectionTitle title="Experience" />
       <div className="relative">
         <div className="absolute left-0 top-0 bottom-0 w-1 bg-gray-300">
           <div

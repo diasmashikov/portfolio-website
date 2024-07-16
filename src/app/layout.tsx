@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "./components/header";
-import { Head } from "next/dist/pages/_document";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { Providers } from "./providers";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +21,10 @@ export default function RootLayout({
       {/* <Head>
         <link rel="icon" href="public/favicon.ico" />
       </Head> */}
-      <body className={`${inter.className} bg-white`}>{children}</body>
+
+      <body className={`${inter.className} `}>
+        <Providers>{children}</Providers>
+      </body>
     </html>
   );
 }

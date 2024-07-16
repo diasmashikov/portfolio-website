@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import SectionTitle from "../section-title";
+import Button from "../button";
 
 const ContactMeSection: React.FC = () => {
   const [name, setName] = useState("");
@@ -40,44 +42,50 @@ const ContactMeSection: React.FC = () => {
   return (
     <section
       id="contactme"
-      className="flex flex-col px-36 min-h-screen relative"
+      className="flex flex-col px-36 min-h-screen relative mt-24"
     >
-      <h2 className="text-6xl font-bold mb-8">Contact Me</h2>
+      <SectionTitle title="Contact Me" />
       <form onSubmit={handleSubmit} className="flex flex-col gap-8">
         <label className="form-control">
           <div className="label">
-            <span className="label-text font-bold">Name</span>
+            <span className="label-text text-primary-text-color font-bold">
+              Name
+            </span>
           </div>
           <input
             type="text"
             placeholder="Keltizarov"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="input h-10 w-1/2 input-bordered text-sm "
+            className="input h-10 w-1/2 input-bordered text-sm  bg-secondary-background-color text-primary-text-color"
             required
           />
         </label>
 
         <label className="form-control ">
           <div className="label">
-            <span className="label-text font-bold">Email</span>
+            <span className="label-text  text-primary-text-color font-bold">
+              Email
+            </span>
           </div>
           <input
             type="email"
             placeholder="akviduk@gmail.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="input h-10 w-1/2 input-bordered text-sm "
+            className="input h-10 w-1/2 input-bordered text-sm   bg-secondary-background-color text-primary-text-color "
             required
           />
         </label>
 
         <label className="form-control">
           <div className="label">
-            <span className="label-text font-bold">Message</span>
+            <span className="label-text text-primary-text-color font-bold">
+              Message
+            </span>
           </div>
           <textarea
-            className="textarea textarea-bordered h-48 w-1/2"
+            className="textarea textarea-bordered  bg-secondary-background-color text-primary-text-color h-48 w-1/2"
             placeholder="Type your message here."
             value={message}
             onChange={(e) => setMessage(e.target.value)}
@@ -85,9 +93,9 @@ const ContactMeSection: React.FC = () => {
           ></textarea>
         </label>
 
-        <button type="submit" className="btn bg-gray-800 text-white w-48">
+        <Button type="submit" className=" w-64 h-12">
           Send
-        </button>
+        </Button>
         {successMessage && (
           <p className="font-bold text-green-500 mt-4">{successMessage}</p>
         )}

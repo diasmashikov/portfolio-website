@@ -2,6 +2,8 @@
 
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import { ThemeSwitcher } from "../theme-switcher";
+// import { ThemeSwitcher } from "../theme-switcher";
 
 const Header: React.FC = () => {
   const handleScroll = (
@@ -25,7 +27,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-10 rounded-3xl border flex items-center justify-between py-6 text-black bg-white mx-64 mt-4 font-semibold">
+    <header className="fixed top-0 left-0 right-0 z-10 rounded-3xl border-header-border-color border flex items-center justify-between py-6 text-header-text-color bg-secondary-background-color mx-64 mt-4 font-semibold">
       <nav className="flex flex-1 justify-between items-center mx-16">
         <ul className="flex flex-row gap-8 items-center">
           <li>
@@ -78,6 +80,9 @@ const Header: React.FC = () => {
             >
               <FaLinkedin className="text-3xl text-blue-500" />
             </a>
+          </li>
+          <li>
+            <ThemeSwitcher />
           </li>
         </ul>
       </nav>

@@ -11,7 +11,7 @@ const OpenSourceComponent: React.FC<OpenSourceDetails> = ({
   projectLink,
 }) => {
   return (
-    <div className="card bg-base-100 shadow-xl p-8 flex flex-col gap-1">
+    <div className="card bg-secondary-background-color shadow-xl p-8 flex flex-col gap-1">
       <div className="flex flex-row justify-between pb-4">
         <CardTitle name={projectName} />
       </div>

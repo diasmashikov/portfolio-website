@@ -1,13 +1,11 @@
 import { openSourceProjects } from "@/content";
 import OpenSourceComponent from "./open-source-component";
+import SectionTitle from "../section-title";
 
 const OpenSourceSection: React.FC = () => {
   return (
     <section id="open-source" className="flex flex-col px-36 min-h-screen">
-      <h2 className="text-6xl font-bold mb-8 mt-48">
-        Open Source Contributions
-      </h2>
-
+      <SectionTitle title="Open Source Contribution" className="mt-64" />
       {openSourceProjects.map((openSourceProject, index) => (
         <OpenSourceComponent key={index} {...openSourceProject} />
       ))}

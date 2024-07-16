@@ -1,5 +1,6 @@
 "use client";
 
+import { ThemeSwitcher } from "@/app/theme-switcher";
 import { projects } from "@/content";
 import Image from "next/image";
 import Link from "next/link";
@@ -49,19 +50,20 @@ const ProjectPage: React.FC = () => {
 
   return (
     <div>
-      <header className="fixed top-0 left-0 right-0 z-10 rounded-3xl border flex items-center py-4 text-black bg-white mx-64 mt-4 font-semibold">
+      <header className="fixed top-0 left-0 right-0 z-10 rounded-3xl border-header-border-color border flex items-center justify-between py-6 text-header-text-color bg-secondary-background-color mx-64 mt-4 font-semibold">
         <nav className="flex-1 flex justify-start">
-          <Link href="/" className="ml-8">
+          <Link href="/#projects" className="ml-8">
             <FaArrowLeftLong className="size-5" />
           </Link>
         </nav>
-        <h1 className="text-xl font-semibold flex-1 text-center">
+        <h1 className="text-xl font-semibold flex-1 text-center ">
           {project.projectName}
         </h1>
-        <div className="flex-1 flex justify-end">
+
+        <div className="flex-1 flex justify-end items-center gap-4 mr-8">
           <a
             href={project.projectLink}
-            className="text-sm font-semibold underline mr-8"
+            className="text-sm font-semibold underline"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -70,7 +72,7 @@ const ProjectPage: React.FC = () => {
         </div>
       </header>
 
-      <div className="pt-48 pb-16 px-16">
+      <div className="pt-48 pb-16 px-16 text-primary-text-color bg-primary-background-color">
         {project.imageSections.map((section, index) => (
           <div
             key={index}

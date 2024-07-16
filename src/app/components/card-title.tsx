@@ -22,7 +22,7 @@ const CardTitle: React.FC<CardTitleProps> = ({ image_file, name }) => {
   const Icon = getIconComponent(name);
 
   return (
-    <div className="flex flex-row gap-2 items-center">
+    <div className="flex flex-row gap-2 items-center text-primary-text-color">
       {Icon}
       <h1 className="text-lg font-bold">{name}</h1>
     </div>

@@ -18,7 +18,10 @@ import Header from "./components/header";
 
 export default function Home() {
   return (
-    <main id="start" className="flex flex-col  min-h-screen">
+    <main
+      id="start"
+      className="flex flex-col  min-h-screen bg-primary-background-color"
+    >
       <Header></Header>
       <GreetingSection classNameDimensions="min-h-screen" />
       <SkillsSection />
