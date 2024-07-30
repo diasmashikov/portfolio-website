@@ -39,18 +39,22 @@ const ProjectComponent: React.FC<ProjectDetails> = ({
         </div>
       </div>
       <div className="hidden md:block bg-gray-300 w-px h-full mx-4"></div>
-      <div className="w-full md:w-1/2 relative group aspect-video md:aspect-square">
-        <Image
-          src={projectForwardPicture}
-          alt={`${projectName} preview`}
-          layout="fill"
-          objectFit="cover"
-        />
-        <div className="absolute inset-0 bg-gray-700 bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
-          <InternalLink
-            href={`project/${projectId}`}
-            websiteName="Learn more"
+      <div className="w-full md:w-1/2 flex items-center justify-center">
+        <div className="relative group w-full h-full">
+          <Image
+            src={projectForwardPicture}
+            alt={`${projectName} preview`}
+            layout="responsive"
+            width={500}
+            height={300}
+            objectFit="contain"
           />
+          <div className="absolute inset-0 bg-gray-700 bg-opacity-40 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
+            <InternalLink
+              href={`project/${projectId}`}
+              websiteName="Learn more"
+            />
+          </div>
         </div>
       </div>
     </div>

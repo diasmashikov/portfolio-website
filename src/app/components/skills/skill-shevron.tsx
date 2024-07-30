@@ -13,7 +13,7 @@ const SkillShevron: React.FC<SkillShevronProps> = ({
   frontendSkills,
 }) => {
   return (
-    <div className="card flex flex-col items-center bg-secondary-background-color text-primary-text-color shadow-md w-full md:w-1/3 p-4  md:m-4 gap-4 md:gap-6">
+    <div className="card flex flex-col items-center bg-secondary-background-color text-primary-text-color shadow-md w-full md:w-1/3 p-4  md:m-4 gap-4 md:gap-6 ">
       {shevronIcon}
       <h3 className="text-xl sm:text-2xl font-bold">{shevronTitle}</h3>
       <div className="flex flex-row flex-wrap items-center justify-center gap-2">
