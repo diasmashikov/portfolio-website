@@ -7,9 +7,9 @@ const ExperienceComponent: React.FC<ExperienceDetails> = ({
   jobDescription,
 }) => {
   return (
-    <div className="relative flex flex-col pl-8 mb-8">
+    <div className="relative flex flex-col sm:pl-8 mb-8">
       <CompanyName className="" companyName={companyName} />
-      <div className="flex flex-row items-center justify-between pb-2">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between pb-2">
         <JobTitle jobTitle={jobTitle} />
         <WorkPeriod workPeriod={workPeriod} />
       </div>
@@ -29,7 +29,7 @@ const CompanyName: React.FC<CompanyNameProps> = ({
 }) => {
   return (
     <h1
-      className={`text-2xl font-semibold text-primary-text-color ${className}`}
+      className={`text-xl sm:text-2xl font-semibold text-primary-text-color ${className}`}
     >
       {companyName}
     </h1>
@@ -41,7 +41,9 @@ type JobTitleProps = {
 };
 
 const JobTitle: React.FC<JobTitleProps> = ({ jobTitle }) => {
-  return <h2 className="text-lg text-primary-text-color">{jobTitle}</h2>;
+  return (
+    <h2 className="text-base sm:text-lg text-primary-text-color">{jobTitle}</h2>
+  );
 };
 
 type WorkPeriodProps = {
@@ -49,7 +51,11 @@ type WorkPeriodProps = {
 };
 
 const WorkPeriod: React.FC<WorkPeriodProps> = ({ workPeriod }) => {
-  return <p className="text-lg text-primary-text-color">{workPeriod}</p>;
+  return (
+    <p className="text-sm sm:text-base text-primary-text-color mt-1 sm:mt-0">
+      {workPeriod}
+    </p>
+  );
 };
 
 export type JobDescriptionProps = {
@@ -60,9 +66,12 @@ export const JobDescription: React.FC<JobDescriptionProps> = ({
   jobDescription,
 }) => {
   return (
-    <ul className="list-disc list-inside">
+    <ul className="list-disc list-outside ml-4 mt-2">
       {jobDescription.map((bulletPoint) => (
-        <li className="pb-2 text-secondary-text-color " key={bulletPoint}>
+        <li
+          className="pb-2 text-sm sm:text-base text-secondary-text-color"
+          key={bulletPoint}
+        >
           {bulletPoint}
         </li>
       ))}

@@ -24,7 +24,7 @@ export function ThemeSwitcher() {
     <button
       onClick={toggleTheme}
       aria-label="Toggle theme"
-      className="text-2xl"
+      className="text-3xl"
     >
       {resolvedTheme === "dark" ? "🌙" : "☀️"}
     </button>

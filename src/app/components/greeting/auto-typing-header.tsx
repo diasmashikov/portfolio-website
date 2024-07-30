@@ -5,12 +5,11 @@ const AutoTypingHeader: React.FC = () => {
   const [showInitialCursor, setShowInitialCursor] = useState(true);
 
   return (
-    <div>
+    <div className="w-full text-center">
       <style jsx>{`
         .typed-cursor {
           opacity: 1;
         }
-
         @keyframes blink {
           0% {
             opacity: 1;
@@ -23,7 +22,7 @@ const AutoTypingHeader: React.FC = () => {
           }
         }
       `}</style>
-      <h1 className="text-4xl font-bold">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold whitespace-nowrap">
         {showInitialCursor && <span className="typed-cursor">|</span>}
         <ReactTyped
           strings={[

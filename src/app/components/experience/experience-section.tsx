@@ -62,17 +62,17 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
     <section
       id="experience"
       ref={sectionRef}
-      className={`flex flex-col relative ${classNameDimensions}`}
+      className={`flex flex-col relative px-4 sm:px-8 md:px-16 lg:px-24 xl:px-36 py-12 ${classNameDimensions}`}
     >
       <SectionTitle title="Experience" />
       <div className="relative">
-        <div className="absolute left-0 top-0 bottom-0 w-1 bg-gray-300">
+        <div className="absolute left-0 top-0 bottom-0 w-1 bg-gray-300 hidden sm:block">
           <div
             className="bg-blue-500 w-full transition-all duration-300 ease-out"
             style={{ height: `${progress * 120}%` }}
           ></div>
         </div>
-        <div ref={experiencesRef} className="pl-8">
+        <div ref={experiencesRef} className="sm:pl-8">
           {experiences.map((experience, index) => (
             <ExperienceComponent key={index} {...experience} />
           ))}

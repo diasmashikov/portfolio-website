@@ -1,16 +1,19 @@
 import { projects } from "@/content";
-import { AiFillAmazonCircle } from "react-icons/ai";
-import { FaExternalLinkAlt, FaUser } from "react-icons/fa";
 import ProjectComponent from "./project-component";
 import SectionTitle from "../section-title";
 
 const ProjectsSection: React.FC = () => {
   return (
-    <section id="projects" className="flex flex-col px-36 min-h-screen">
+    <section
+      id="projects"
+      className="flex flex-col px-4 sm:px-8 md:px-16 lg:px-24 xl:px-36 py-12 min-h-screen"
+    >
       <SectionTitle title="Projects" />
-      {projects.map((project, index) => (
-        <ProjectComponent key={index} {...project} />
-      ))}
+      <div className="space-y-8 md:space-y-12">
+        {projects.map((project, index) => (
+          <ProjectComponent key={index} {...project} />
+        ))}
+      </div>
     </section>
   );
 };

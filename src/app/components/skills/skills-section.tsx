@@ -8,17 +8,23 @@ import { backendSkills, devTools, frontendSkills } from "@/content";
 
 export const skills: ShevronSkillsData[] = [
   {
-    shevronIcon: <HiOutlineComputerDesktop className="size-12" />,
+    shevronIcon: (
+      <HiOutlineComputerDesktop className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />
+    ),
     shevronTitle: "Frontend",
     skills: frontendSkills,
   },
   {
-    shevronIcon: <CiServer className="size-12" />,
+    shevronIcon: (
+      <CiServer className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />
+    ),
     shevronTitle: "Backend",
     skills: backendSkills,
   },
   {
-    shevronIcon: <VscTools className="size-12" />,
+    shevronIcon: (
+      <VscTools className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12" />
+    ),
     shevronTitle: "DevOps",
     skills: devTools,
   },
@@ -26,16 +32,19 @@ export const skills: ShevronSkillsData[] = [
 
 const SkillsSection: React.FC = () => {
   return (
-    <section id="open-source" className="flex flex-col px-36 min-h-screen">
+    <section
+      id="open-source"
+      className="flex flex-col px-4 sm:px-8 md:px-16 lg:px-24 xl:px-36 min-h-screen py-12"
+    >
       <SectionTitle title="Skills" />
       <div className="flex flex-col">
-        <div className="flex flex-row">
+        <div className="flex flex-col md:flex-row">
           {skills.map((skill) => (
             <SkillShevron
-              key={skill.shevronTitle} // Assuming shevronTitle is unique
+              key={skill.shevronTitle}
               shevronIcon={skill.shevronIcon}
               shevronTitle={skill.shevronTitle}
-              frontendSkills={skill.skills} // This prop name should match the expected prop in SkillShevron for the skills array
+              frontendSkills={skill.skills}
             />
           ))}
         </div>
