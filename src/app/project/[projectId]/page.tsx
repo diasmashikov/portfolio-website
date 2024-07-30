@@ -57,10 +57,11 @@ const ProjectPage: React.FC = () => {
             <FaArrowLeftLong className="w-4 h-4 sm:w-5 sm:h-5" />
           </Link>
         </nav>
-        <h1 className="text-lg sm:text-xl font-semibold flex-1 text-center truncate px-2">
+        <h1 className="text-xs sm:text-base md:text-lg lg:text-xl font-semibold flex-1 text-center truncate px-2">
           {project.projectName}
         </h1>
-        <div className="flex-1 flex justify-end items-center gap-4 mr-4 sm:mr-8">
+
+        <div className="flex-1 flex justify-end items-center mr-4 sm:mr-8">
           <a
             href={project.projectLink}
             className="text-xs sm:text-sm font-semibold underline truncate max-w-[120px] sm:max-w-[200px]"
