@@ -23,32 +23,17 @@ const GreetingSection: React.FC<GreetingSectionProps> = ({
     }
   };
 
-  const handleDownload = () => {
-    const link = document.createElement("a");
-    link.href = "/Mashikov_Dias_Resume.pdf";
-    link.download = "Dias_Mashikov_Resume.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
-
   return (
     <div
       className={`flex flex-col items-center justify-center ${classNameDimensions} px-4 sm:px-6 md:px-8 lg:px-16`}
     >
       <div className="w-full max-w-3xl mx-auto text-center">
         <p className="text-secondary-text-color font-semibold pb-4 sm:pb-6 text-sm sm:text-base md:text-lg">
-          Hello, I am Dias. A senior year CS student looking for 2024-2025
-          software engineering internship
+          Hello, I am Dias. A senior year CS student looking for 2025 software
+          engineering internship specializing in Full-Stack (Frontend, Backend, and DevOps) Development
         </p>
         <AutoTypingHeader />
         <div className="flex flex-col sm:flex-row justify-center gap-4 p-4 sm:p-8 mt-4">
-          <Button
-            onClick={handleDownload}
-            className="w-full sm:w-auto text-sm sm:text-base"
-          >
-            Download CV
-          </Button>
           <Button
             className="w-full sm:w-auto text-sm sm:text-base bg-secondary-button-color border-secondary-button-color text-secondary-button-text-color hover:bg-secondary-button-color/40"
             onClick={() => handleScroll("contactme")}

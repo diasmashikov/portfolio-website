@@ -41,7 +41,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
         });
       },
       {
-        threshold: Array.from({ length: 51 }, (_, i) => i / 50),
+        threshold: Array.from({ length: 200 }, (_, i) => i / 200),
         root: null,
         rootMargin: "0px",
       }
@@ -69,7 +69,7 @@ const ExperienceSection: React.FC<ExperienceSectionProps> = ({
         <div className="absolute left-0 top-0 bottom-0 w-1 bg-gray-300 hidden sm:block">
           <div
             className="bg-blue-500 w-full transition-all duration-300 ease-out"
-            style={{ height: `${progress * 120}%` }}
+            style={{ height: `${progress * 200}%` }}
           ></div>
         </div>
         <div ref={experiencesRef} className="sm:pl-8">
